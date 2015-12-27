@@ -4,7 +4,9 @@
 ## Write a short comment describing this function
 
 makeCacheMatrix <- function(x = matrix()) {
-
+ x <- c(2, 4, 3, 1, 6)
+ 
+ cacheSolve(x)
 }
 
 
@@ -12,4 +14,13 @@ makeCacheMatrix <- function(x = matrix()) {
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
+  if (!is.null(x)) {
+    
+    x
+  } else {solve(x)}
+  
+    
+    x 
+
+  
 }
