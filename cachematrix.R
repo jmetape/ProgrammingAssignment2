@@ -1,6 +1,6 @@
 ## updating document for feb submission
 
-## Write a short comment describing this function
+33
 
 makeCacheMatrix <- function(x = matrix()) {
  x <- c(2, 4, 3, 1, 6)
@@ -9,7 +9,7 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## 
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
