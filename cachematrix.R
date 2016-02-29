@@ -1,25 +1,34 @@
-## updating document for feb submission
+##submission for week 3 assignment
 
-33
+##  sets  matrix, get the matrix, set  inverse, get  inverse, calls cacheSolve.
 
 makeCacheMatrix <- function(x = matrix()) {
- x <- c(2, 4, 3, 1, 6)
- 
- cacheSolve(x)
+  inv <- NULL
+  set <- function(y){
+    x <<- y
+    inv <<- NULL
+  }
+  get <- function() x
+  setinv <- function(invert) inv <<- invert
+  getinv <- function() inv
+  list(set = set, get = get, setinv = setinv, getinv = getinv)
 }
 
 
-## 
+## checks if inverse exists. yes, gets from cache, no, set it and put in cache
+
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
-  if (!is.null(x)) {
-    
-    x
-  } else {solve(x)}
+  inv <- x$getinv()
   
-    
-    x 
-
+  #checks to see if inverse has been calculated
+  if(!is.null(inv)){
+    print("Pulling info...")
+    return(inv)
+  }
   
+  data <- x$get()
+  inv = solve(data, ...)
+  return(inv)
 }
